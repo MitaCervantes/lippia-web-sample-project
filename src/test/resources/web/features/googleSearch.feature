@@ -15,7 +15,7 @@ Examples:
 
 
 @NotInGoogle
-Scenario: The client search by "Lippia"
+Scenario: The client search by "search"
   Given The client isn't on google page
   When The client search for word Testing
   Then The client verify that results are shown properly
