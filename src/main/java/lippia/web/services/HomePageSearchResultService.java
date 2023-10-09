@@ -1,12 +1,9 @@
 package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
-import com.crowdar.core.actions.WebActionManager;
 import lippia.web.constants.AutomationConstants;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
-import java.util.List;
 
 public class HomePageSearchResultService extends ActionManager {
 

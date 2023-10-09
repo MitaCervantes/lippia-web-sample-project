@@ -6,7 +6,7 @@ Background:
 Given ingreso a la pagina de automationtesting
 
 @RegistroFallido
-Scenario Outline: Registro fallido por <falla>
+Scenario Outline: Registro fallido
   When hago clic en el menú Mi Cuenta
   And ingresa una dirección de correo electrónico <correo> en el campo de dirección de correo electrónico
   When ingresa una contraseña <contrasenia> vacía en el campo de contraseña
@@ -15,18 +15,20 @@ Scenario Outline: Registro fallido por <falla>
 
 @ContraseniaVacia
   Examples:
-    | correo                     | contrasenia | resultado                        | falla             |
-    | mita_cervantes@hotmail.com |             | Ingrese una contraseña de cuenta | contrasenia vacia |
+    | correo                     | contrasenia | resultado                        |
+    | mita_cervantes@hotmail.com |             | Ingrese una contraseña de cuenta |
+#Falla por contrasenia vacia
 
-@CorreoInvalido
+  @CorreoRegistrado
   Examples:
-    | correo    | contrasenia | resultado                  | falla           |
-    | mm@ll.com | Cmita2021#  | Nombre de usuario invalido | correo invalido|
+    | correo  | contrasenia | resultado                  |
+    | mita_cervantes@hotmail.com  | Cmita2021#  | Nombre de usuario invalido |
+#Falla por correo registrado
 
-@CorreoVacio
+  @CorreoVacio
   Examples:
-    | correo | contrasenia | resultado                                   | falla        |
-    |        | Cmita2021#  | Ingrese una dirección de correo electrónico | correo vacio |
-
+    | correo | contrasenia | resultado                                   |
+    |        | Cmita2021#  | Ingrese una dirección de correo electrónico |
+#Falla por correo vacio
 
 

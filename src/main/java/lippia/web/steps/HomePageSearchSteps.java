@@ -22,14 +22,7 @@ public class HomePageSearchSteps {
 
     @Then("debería ver (.*) (.*) en la página de inicio")
     public void slidersAndArrivals(String cantidad, String elemento) {
-        HomePageService.slidersVerification(cantidad, elemento);
-        HomePageService.arrivalsVerification(cantidad, elemento);
-    }
-
-    @And("la página de inicio debería contener solo (.*) (.*)")
-    public void laPaginaDeInicioDeberiaContenerSolo(String cantidad, String elemento) {
-        HomePageService.slidersVerification(cantidad, elemento);
-        HomePageService.arrivalsVerification(cantidad, elemento);
+        HomePageService.selectorCasos(cantidad, elemento);
     }
 
     @When("hago clic en la imagen de uno de los ingresos")

@@ -9,7 +9,6 @@ Scenario Outline: Verificar elementos en la página de inicio
   When hago clic en el menú Shop
   And hago clic en el botón de menú Home
   Then debería ver <cantidad> <elemento> en la página de inicio
-  And la página de inicio debería contener solo <cantidad> <elemento>
 
   Examples:
     | cantidad           | elemento   |
