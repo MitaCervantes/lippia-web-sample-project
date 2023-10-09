@@ -22,6 +22,7 @@ public class RegistrationService extends ActionManager {
     }
 
     public static void clickRegisterButton() {
+        ActionManager.waitVisibility(AutomationConstants.REGISTER_BUTTON_XPATH);
         click(AutomationConstants.REGISTER_BUTTON_XPATH);
     }
 

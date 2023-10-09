@@ -13,7 +13,7 @@ Scenario: Login Exitoso
   Then el usuario debe iniciar sesión correctamente en la página web
 
 @LoginFalla
-Scenario Outline: Login fallido por <falla>
+Scenario Outline: Login fallido
   When hago clic en el menú Mi Cuenta
   And ingreso el nombre de usuario <tipoUsuario> en el campo de nombre de usuario
   When ingreso la contraseña <contrasenia> en el campo de contraseña
@@ -22,10 +22,12 @@ Scenario Outline: Login fallido por <falla>
 
 @Incorrecto
   Examples:
-    | tipoUsuario | contrasenia | resultado                  | falla                             |
-    | incorrecto  | incorrecta  | Nombre de usuario invalido | usuario y contrasenia incorrectos |
+    | tipoUsuario | contrasenia | resultado                  |
+    | incorrecto  | incorrecta  | Nombre de usuario invalido |
+#Falla por usuario y contrasenia incorrectos
 
 @campoVacio
   Examples:
-    | tipoUsuario | contrasenia | resultado            | falla                              |
-    | valido      |             | Contrasenia invalida | usuario valido y contrasenia vacia |
+    | tipoUsuario | contrasenia | resultado            |
+    | valido      |             | Contrasenia invalida |
+#Falla por usuario valido y contrasenia vacia
