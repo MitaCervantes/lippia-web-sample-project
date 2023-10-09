@@ -28,6 +28,6 @@ Scenario Outline: Login fallido
 
 @campoVacio
   Examples:
-    | tipoUsuario | contrasenia | resultado            |
-    | valido      |             | Contrasenia invalida |
+    | tipoUsuario                | contrasenia | resultado            |
+    | mita_cervantes@hotmail.com |             | Contrasenia invalida |
 #Falla por usuario valido y contrasenia vacia
